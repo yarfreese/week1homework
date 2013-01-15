@@ -18,18 +18,32 @@ describe 'Everything is an Object!' do
     "Two".should be_a Object
   end
 
-  it 'Numbers are objects'
+  it 'Numbers are objects' do
+    2.should be_a Object
+  end
 
-  it 'Hashes are objects'
+  it 'Hashes are objects' do
+    Hash.should be_a Object
+  end
 
-  it 'Arrays are objects'
+  it 'Arrays are objects' do
+    Array.should be_a Object
+  end
 
-  it 'Expressions evaluate to objects'
+  it 'Expressions evaluate to objects' do
+    Math.sqrt(2+5/6).should be_a Object
+  end
 
-  it 'Symbols are objects'
+  it 'Symbols are objects' do
+    :symbol.should be_a Object
+  end
 
-  it 'Classes are objects'
+  it 'Classes are objects' do
+    Class.new.should be_a Object
+  end
 
-  it 'ADD ANY EXAMPLE THAT EVALUATES AN OBJECT'
+  it 'ADD ANY EXAMPLE THAT EVALUATES AN OBJECT' do
+    true.should be_a Object
+  end
 
 end
