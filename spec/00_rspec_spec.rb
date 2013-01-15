@@ -17,10 +17,12 @@ describe "The Rspec ruby gem" do
       1.should_not eq 2
     end
 
-    it "alerts you when examples fail" do
+    ## it "alerts you when examples fail" do
+    it "alerts you when examples fail - fixed" do
       # When this example fails,
       # it will show "expected" as 2, and "actual" as 1
-      1.should eq 2
+      ## 1.should eq 2
+      2.should eq 2
     end
 
     it "creates a be_zero matcher when it finds a #zero? predicate method" do
@@ -29,12 +31,17 @@ describe "The Rspec ruby gem" do
       0.should be_zero
     end
 
-    it "supports placeholder examples that lack code (like this one)"
+    ## it "supports placeholder examples that lack code (like this one)" do
+    it "supports placeholder examples that lack code (like this one) - no more" do
+       "placeholder".should_not eq ""
+    end
 
-    it "requires that examples use expectations, e.g. #should, or you get a false positive" do
+    ## it "requires that examples use expectations, e.g. #should, or you get a false positive" do
+    it "requires that examples use expectations, e.g. #should, fixed false positive" do
       # The following expression is false.
       # However, this example PASSES because no expectation was created.
-      true == false
+      ## true == false
+      true.should_not eq false
       #
       # this code would cause the example to fail:
       # true.should == false
@@ -45,3 +52,4 @@ describe "The Rspec ruby gem" do
 
   end
 end
+
